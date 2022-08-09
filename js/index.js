@@ -1,4 +1,3 @@
-
 console.log("I'm ready!");
 
 // Iteration 1: Names and Input
@@ -33,11 +32,30 @@ console.log(hacker1[0] + " " + hacker1[1] + " " + hacker1[2] + " " + hacker1[3] 
 let result = hacker1.split('').join(' ');
 console.log(result);
 
+// another way is.... : 
+
+let output = " "
+for (let i = 0; i < hacker1.length; i++){
+    output += hacker1[i].toUpperCase() + " "; 
+}
+console.log(output.slice(0, 8));
+
+
 //3.2. 
+
+// stupid way... : 
 
 console.log(hacker2[5] + hacker2[4] + hacker2[3] + hacker2[2] + hacker2[1] + hacker2[0]);
 
+// best way ... : 
+
+for (let i = hacker1.length - 1; i >= 0; i++){
+    console.log(hacker1[i]);
+}
+
 //3.3. 
+
+// best way: with the localeCompare() !! 
 
 if (hacker1.localeCompare(hacker2) ==1) {
     console.log('Yo, the navigator goes first definitely.')
@@ -47,10 +65,29 @@ if (hacker1.localeCompare(hacker2) ==1) {
     console.log("What?! You both have the same name?")
 };
 
+// another way to work is with: 
+
+"a" < "b"
+"aa" < "ab"
+"aaa" < "aab"
 
 // BONUS 1:
 
 // Nr. 1
+
+// on our knowlage: 
+
+let lorem = "the paragraphs";  
+
+let wordCount = 1; 
+for (let i = 0; i < lorem.length; i++){
+    if (lorem[i] === " ") {
+        wordCount++;
+    }
+}
+console.log(wordCount);
+
+// better way: 
 function countWords(text) {
     const arr = text.split(' ');
   
